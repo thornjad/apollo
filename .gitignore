@@ -22,6 +22,13 @@ Library/
 Assets/AssetStoreTools*
 Build/
 Builds/
+*/Temp/
+*/Obj/
+*/UnityGenerated/
+*/Library/
+*/Assets/AssetStoreTools*
+*/Build/
+*/Builds/
 
 # Builds
 *.apk
