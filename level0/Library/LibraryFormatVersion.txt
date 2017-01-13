@@ -1,2 +1,3 @@
-unityRebuildLibraryVersion: 11
-unityForwardCompatibleVersion: 40
+version https://git-lfs.github.com/spec/v1
+oid sha256:f61018b96c5584ed27139518fb0be43511911c8af07a56dd1fbb38f28b316091
+size 67
