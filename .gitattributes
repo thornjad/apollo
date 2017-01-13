@@ -23,3 +23,4 @@ level0/Library/ShaderCache filter=lfs diff=lfs merge=lfs -text
 level0/Library/ShaderCache.db filter=lfs diff=lfs merge=lfs -text
 level0/Library/shadercompiler-UnityShaderCompiler.exe0.log filter=lfs diff=lfs merge=lfs -text
 level0/Library/UnityAssemblies filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
