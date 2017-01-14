@@ -25,8 +25,7 @@ namespace UnityStandardAssets.Utility
             // find out the maximum lifetime of any particles in this effect
             foreach (var system in systems)
             {
-				ParticleSystem.MainModule main = system.main;
-				m_MaxLifetime = Mathf.Max(main.startLifetime.Evaluate(1), m_MaxLifetime); // this line was changed to remove deprecated code, but I don't know what I'm doing
+                m_MaxLifetime = Mathf.Max(system.startLifetime, m_MaxLifetime);
             }
 
             // wait for random duration

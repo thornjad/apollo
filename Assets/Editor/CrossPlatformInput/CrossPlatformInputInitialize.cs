@@ -32,6 +32,7 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
             {
                 case BuildTarget.Android:
                 case BuildTarget.iOS:
+                case BuildTarget.WP8Player:
                 case BuildTarget.PSM: 
                 case BuildTarget.Tizen: 
                 case BuildTarget.WSAPlayer: 
@@ -65,6 +66,7 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
             {
                 case BuildTarget.Android:
                 case BuildTarget.iOS:
+                case BuildTarget.WP8Player:
                     EditorUtility.DisplayDialog("Mobile Input",
                                                 "You have disabled Mobile Input. Mobile control rigs won't be visible, and the Cross Platform Input functions will always return standalone controls.",
                                                 "OK");
@@ -86,13 +88,14 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
                 BuildTargetGroup.Standalone,
                 BuildTargetGroup.Android,
                 BuildTargetGroup.iOS,
-                BuildTargetGroup.WSA
+                BuildTargetGroup.WP8
             };
 
         private static BuildTargetGroup[] mobileBuildTargetGroups = new BuildTargetGroup[]
             {
                 BuildTargetGroup.Android,
                 BuildTargetGroup.iOS,
+                BuildTargetGroup.WP8,
                 BuildTargetGroup.PSM, 
                 BuildTargetGroup.SamsungTV,
                 BuildTargetGroup.Tizen,
