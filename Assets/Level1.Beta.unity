@@ -27563,7 +27563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fd0579cdb41494db759d3ac862b9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2020813964}
   followDistance: 1
   cameraHeight: 10
 --- !u!1 &893456060
