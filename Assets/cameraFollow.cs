@@ -5,13 +5,23 @@ using UnityEngine;
 public class cameraFollow : MonoBehaviour
 {
   public GameObject target;
-  public float followDistance = 1f;
-  public float cameraHeight = 10f;
+  public float damping = 1f;
+  Vector3 offset;
+
+  void Start()
+  {
+    offset = target.transform.position - transform.position;
+  }
 
   void LateUpdate()
   {
-    transform.position = new Vector3(target.transform.position.x + followDistance,
-                                          target.transform.position.y + cameraHeight,
-                                          target.transform.position.z + followDistance);
+    float currentAngle = transform.eulerAngles.y;
+    float desiredAngle = target.transform.eulerAngles.y;
+    float angle = Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
+
+    Quaternion rotation = Quaternion.Euler(0, angle, 0);
+    transform.position = target.transform.position - (rotation * offset);
+
+    transform.LookAt(target.transform);
   }
 }
