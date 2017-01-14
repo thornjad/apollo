@@ -36,11 +36,11 @@ public class rawInput : MonoBehaviour {
     {
       moveHorizontal(false);
     }
-    if (Input.GetKey(KeyCode.Q))
+    if (Input.GetKey(KeyCode.LeftArrow))
     {
       rotate(true);
     }
-    if (Input.GetKey(KeyCode.E))
+    if (Input.GetKey(KeyCode.RightArrow))
     {
       rotate(false);
     }
@@ -72,10 +72,10 @@ public class rawInput : MonoBehaviour {
   {
     if (rotateLeft)
     {
-      transform.Rotate(Vector3.up * moveSpeed * Time.deltaTime);
+      transform.Rotate(Vector3.down * rotateSpeed * Time.deltaTime);
     } else
     {
-      transform.Rotate(Vector3.down * moveSpeed * Time.deltaTime);
+      transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
     }
   }
 }
