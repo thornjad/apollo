@@ -2079,7 +2079,7 @@ GameObject:
   - component: {fileID: 1207628095}
   - component: {fileID: 1207628094}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Player
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2146,8 +2146,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1207628093}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.13941076, y: 0.5049155, z: -0.08303096, w: 0.84778005}
   m_LocalPosition: {x: 210.58057, y: 47.83838, z: 185.86298}
+=======
+  m_LocalRotation: {x: -0.24939252, y: -0.3613484, z: 0.10094082, w: -0.89277196}
+  m_LocalPosition: {x: 173.75, y: 29.63, z: 316.92}
+>>>>>>> origin/master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2300,8 +2305,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291634904}
+<<<<<<< HEAD
   m_LocalRotation: {x: -0.3595474, y: 0.4754579, z: 0.22150722, w: 0.7717513}
   m_LocalPosition: {x: 26.865051, y: -299.06448, z: 182.34885}
+=======
+  m_LocalRotation: {x: -0.24939214, y: 0.3613486, z: 0.10094176, w: 0.89277184}
+  m_LocalPosition: {x: 173.75, y: -7.8500004, z: 316.92}
+>>>>>>> origin/master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
