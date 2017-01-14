@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 77152476f4b7f7c4994c6835e893e251
-timeCreated: 1484351892
-licenseType: Free
+guid: 4dfd340ac24081a46939546c48b88123
+timeCreated: 1460556786
+licenseType: Store
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -12,12 +12,12 @@ ModelImporter:
     4300000: ceiling-fan
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -56,7 +56,6 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -67,10 +66,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
