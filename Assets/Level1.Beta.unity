@@ -27650,8 +27650,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fd0579cdb41494db759d3ac862b9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   target: {fileID: 2020813964}
   damping: 1
+=======
+  target: {fileID: 0}
+  followDistance: 1
+  cameraHeight: 10
+>>>>>>> parent of dcf0143... move camera script to follow-type
 --- !u!1 &893456060
 GameObject:
   m_ObjectHideFlags: 0
