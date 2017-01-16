@@ -1,0 +1,16 @@
+AudioManager.asset filter=lfs diff=lfs merge=lfs -text
+ClusterInputManager.asset filter=lfs diff=lfs merge=lfs -text
+DynamicsManager.asset filter=lfs diff=lfs merge=lfs -text
+EditorBuildSettings.asset filter=lfs diff=lfs merge=lfs -text
+EditorSettings.asset filter=lfs diff=lfs merge=lfs -text
+GraphicsSettings.asset filter=lfs diff=lfs merge=lfs -text
+InputManager.asset filter=lfs diff=lfs merge=lfs -text
+NavMeshAreas.asset filter=lfs diff=lfs merge=lfs -text
+NetworkManager.asset filter=lfs diff=lfs merge=lfs -text
+Physics2DSettings.asset filter=lfs diff=lfs merge=lfs -text
+ProjectSettings.asset filter=lfs diff=lfs merge=lfs -text
+QualitySettings.asset filter=lfs diff=lfs merge=lfs -text
+TagManager.asset filter=lfs diff=lfs merge=lfs -text
+TimeManager.asset filter=lfs diff=lfs merge=lfs -text
+UnityAdsSettings.asset filter=lfs diff=lfs merge=lfs -text
+UnityConnectSettings.asset filter=lfs diff=lfs merge=lfs -text
