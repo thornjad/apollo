@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Material
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -90,7 +90,7 @@ Material:
       second: 0
     - first:
         name: _GlossyReflections
-      second: 1
+      second: 0
     - first:
         name: _Metallic
       second: 0
@@ -111,7 +111,7 @@ Material:
       second: 0
     - first:
         name: _SpecularHighlights
-      second: 1
+      second: 0
     - first:
         name: _SrcBlend
       second: 1
@@ -124,7 +124,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.60294116, g: 0, b: 0, a: 1}
+      second: {r: 0.32352942, g: 0.02378893, b: 0.02378893, a: 1}
     - first:
         name: _EmisColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 0}
