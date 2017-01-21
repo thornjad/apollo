@@ -62,7 +62,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
       if (!WasPreviouslyGrounded && CharacterController.isGrounded)
       {
-        StartCoroutine(m_JumpBob.DoBobCycle());
         PlayLandingSound();
         MoveDirection.y = 0f;
         IsJumping = false;
@@ -176,22 +175,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
     private void UpdateCameraPosition(float speed)
     {
       Vector3 newCameraPosition;
-      if (!m_UseHeadBob)
-      {
-        return;
-      }
       if (CharacterController.velocity.magnitude > 0 && CharacterController.isGrounded)
       {
-        Camera.transform.localPosition =
-          m_HeadBob.DoHeadBob(CharacterController.velocity.magnitude +
-                    (speed*(IsWalking ? 1f : RunStepModifier)));
         newCameraPosition = Camera.transform.localPosition;
-        newCameraPosition.y = Camera.transform.localPosition.y - m_JumpBob.Offset();
+        newCameraPosition.y = Camera.transform.localPosition.y;
       }
       else
       {
         newCameraPosition = Camera.transform.localPosition;
-        newCameraPosition.y = OriginalCameraPosition.y - m_JumpBob.Offset();
+        newCameraPosition.y = OriginalCameraPosition.y;
       }
       Camera.transform.localPosition = newCameraPosition;
     }
