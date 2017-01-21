@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [SerializeField] private AudioClip LandSound;
 
     private Camera Camera;
-    private bool Jump;
+    private bool Jumping;
     private float YRotation;
     private Vector2 Input;
     private Vector3 MoveDirection = Vector3.zero;
@@ -54,26 +54,41 @@ namespace UnityStandardAssets.Characters.FirstPerson
     private void Update()
     {
       RotateView();
-      // the jump state needs to read here to make sure it is not missed
-      if (!Jump)
-      {
-        Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-      }
+      CheckCharacterActionStates();
+    }
 
-      if (!WasPreviouslyGrounded && CharacterController.isGrounded)
-      {
-        PlayLandingSound();
-        MoveDirection.y = 0f;
-        IsJumping = false;
-      }
-      if (!CharacterController.isGrounded && !IsJumping && WasPreviouslyGrounded)
-      {
-        MoveDirection.y = 0f;
-      }
+    private void CheckCharacterActionStates() {
+      CheckIfJumping();
+      CheckIfLanding();
+      CheckIfInAirAndNotJumping();
+      CheckIfGrounded();
+    }
 
+    private void CheckIfJumping() {
+      if (!Jumping) Jumping = CrossPlatformInputManager.GetButtonDown("Jump");
+    }
+
+    private void CheckIfLanding() {
+      if (!WasPreviouslyGrounded && CharacterController.isGrounded) PlayerLand();
+    }
+
+    private void CheckIfInAirAndNotJumping() {
+      if (!CharacterController.isGrounded && !IsJumping && WasPreviouslyGrounded) StopMovingInDirectionY();
+    }
+
+    private void CheckIfGrounded() {
       WasPreviouslyGrounded = CharacterController.isGrounded;
     }
 
+    private void PlayerLand() {
+      PlayLandingSound();
+      StopMovingInDirectionY();
+      IsJumping = false;
+    }
+
+    private void StopMovingInDirectionY() {
+      MoveDirection.y = 0f;
+    }
 
     private void PlayLandingSound()
     {
@@ -104,11 +119,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
       {
         MoveDirection.y = -StickToGroundForce;
 
-        if (Jump)
+        if (Jumping)
         {
           MoveDirection.y = JumpSpeed;
           PlayJumpSound();
-          Jump = false;
+          Jumping = false;
           IsJumping = true;
         }
       }
